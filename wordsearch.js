@@ -1,4 +1,4 @@
-const wordSearch = (letters, word) => { 
+const wordSearch = (letters, word) => {
     const horizontalJoin = letters.map(ls => ls.join(''))
 
     // new const for vertical perhaps?
@@ -9,19 +9,19 @@ const wordSearch = (letters, word) => {
 
     if (doesInclude(verticalJoin, word)) {
         return true;
-    } else if(doesInclude(horizontalJoinReverse, word)) {
+    } else if (doesInclude(horizontalJoinReverse, word)) {
         return true;
-    } else if(doesInclude(horizontalJoin, word)) {
+    } else if (doesInclude(horizontalJoin, word)) {
         return true;
-    } else if(doesInclude(verticalJoinReverse, word)) {
+    } else if (doesInclude(verticalJoinReverse, word)) {
         return true;
     }
     return false;
 }
 
 const doesInclude = (letters, word) => {
-    for(const l of letters) {
-        if(l.includes(word)) {
+    for (const l of letters) {
+        if (l.includes(word)) {
             return true;
         }
     }
